@@ -1,27 +1,36 @@
-'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import dollarIcon from '@/assets/icon/dollar.svg'
+import BorrowContent from '@/components/Home/BorrowContent';
+import SavingContent from '@/components/Home/SavingContent';
+import WalletData from '@/components/Home/WalletData';
+import DelegateeHistory from '@/components/Home/delegatee/DelegateeHistory';
+import Delegations from '@/components/Home/delegations/Delegations';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function Home() {
-  const router = useRouter()
-  const redirect = () => {
-    router.push(`/actions/hhey?name=$repayy`)
-  }
+const Home: NextPage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     <div>
-        <img src={dollarIcon.src} alt="" />
-        <nav className='flex'>
-          <Link href={'/about'}>Aboout</Link>
-          <div className='ml-2'></div>
-          <Link href={`/actions/ñcñcñcñc?name=deposiit`}>
-            Action
-          </Link>
-          <button onClick={redirect} className='ml-2'>repay</button>
-        </nav>
-     </div>
-    </main>
-  )
-}
+    <div>
+      <Head>
+        <title>Zk Tropykus App</title>
+        <meta
+          content="Tropykus ZKEVM"
+          name="description"
+        />
+        <link href="/favicon.ico" rel="icon" />
+      </Head>
+      <main>
+        <Link href={`/actions/tes?name=repay`}>
+          Hola
+        </Link>
+        <WalletData />
+        <SavingContent />
+        <BorrowContent />
+        {/* <DelegateeHistory /> */}
+        <Delegations />
+      </main>
+    </div>
+  );
+};
+
+// export default Home;
+export default Home;

@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "zk-tropykus",
+    "zk-tropykus": "zk-tropykus"
+  },
+  "targets": {
+    "zk-tropykus": {
+      "hosting": {
+        "zk-tropykus": [
+          "zk-testnet-tropykus"
+        ],
+        "zk-mainnet-tropykus": [
+          "zk-mainnet-tropykus"
+        ],
+        "zk-testnet-tropykus": [
+          "zk-testnet-tropykus"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
