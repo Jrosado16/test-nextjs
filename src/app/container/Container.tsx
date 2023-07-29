@@ -20,7 +20,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     watchNetwork((network) => {
-      console.log('network: ', network);
+      console.log('network: network', network);
     });
   
     watchAccount((account) => {
