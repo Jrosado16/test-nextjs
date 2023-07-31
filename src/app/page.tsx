@@ -19,9 +19,6 @@ const Home: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main>
-        <Link href={`/actions/tes?name=repay`}>
-          Hola
-        </Link>
         <WalletData />
         <SavingContent />
         <BorrowContent />
